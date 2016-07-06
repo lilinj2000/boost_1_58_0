@@ -1,4 +1,4 @@
-./bootstrap.sh --prefix=$home/3rd
+./bootstrap.sh --prefix=$HOME/3rd/boost
 
 ./b2 cxxflags="-std=c++11"
 
