@@ -10,5 +10,10 @@ pipeline {
 ./b2 cxxflags="-std=c++11"'''
       }
     }
+    stage('install') {
+      steps {
+        sh './b2 install'
+      }
+    }
   }
 }
