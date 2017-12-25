@@ -5,8 +5,9 @@ pipeline {
       steps {
         sh '''kernel=`uname -sr | sed --e=\'s/ /\\//\'`
 
-echo $kernel
-'''
+./bootstrap.sh --prefix=$JENKINS_HOME/3rd/${kernel}/boost
+
+./b2 cxxflags="-std=c++11"'''
       }
     }
   }
