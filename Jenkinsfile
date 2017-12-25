@@ -3,9 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh '''kernel=`uname -s`
-kernel+=\'/\'
-kernel+=`uname -r`
+        sh '''kernel=`uname -sr | sed --e=\'s/ /\\//\'`
 
 echo $kernel
 '''
