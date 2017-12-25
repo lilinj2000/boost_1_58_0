@@ -7,7 +7,7 @@ pipeline {
 
 ./bootstrap.sh --prefix=$JENKINS_HOME/3rd/${kernel}/boost
 
-./b2 cxxflags="-std=c++11"'''
+./b2 cxxflags="-std=c++11" -DBOOST_NO_CXX14_INTEGER_SEQUENCE'''
       }
     }
     stage('install') {
