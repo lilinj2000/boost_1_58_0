@@ -16,8 +16,8 @@ pipeline {
       steps {
         sh '''
 	./bootstrap.sh --prefix=${home_3rd}/boost
-	./b2 cxxflags="-fPIC -std=c++11" --without-context
-	./b2 cxxflags="-fPIC" --with-context
+	./b2 cxxflags="-std=c++11" --without-context
+	./b2 --with-context
 	'''
       }
     }
